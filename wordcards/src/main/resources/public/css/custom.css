@@ -1,0 +1,70 @@
+th, td {
+    border: 1px solid;
+    border-color: #968dad #968dad;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    border-style: dashed !important;
+}
+
+.del-wordcard-button, .del-result-button {
+    width: 100%;
+}
+
+#wordcards {
+    margin-bottom: 5px;
+}
+
+#exam-jumbo {
+    text-align: center;
+}
+
+#themes-group, #result-container {
+    margin-left: 50px;
+}
+
+#themes-group {
+    margin-top: 10px;
+}
+
+#result-container {
+    margin-top: 30px;
+}
+
+#teacher-button-group {
+    margin-bottom: 30px;
+}
+
+#card-image-container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#card-image {
+    border: dashed;
+}
+
+#evaluation-button, #sign-in-button, #logout-button {
+    margin: 20px;
+}
+
+#get-card {
+    margin: 30px;
+}
+
+#result-points {
+    color: cornflowerblue;
+}
+
+#sign-in-button, #logout-button {
+    margin: 5px 10px 5px 10px;
+}
+
+#sign-in-input {
+    margin: 10px 10px 5px 10px;
+}

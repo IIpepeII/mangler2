@@ -1,0 +1,42 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head th:include="header :: head">
+</head>
+<body>
+<div th:include="navbar :: navbar"></div>
+<div class="jumbotron">
+    <div class="container">
+        <h2>File Upload</h2>
+        <form method="POST" enctype="multipart/form-data" action="upload">
+            <h4>Select picture</h4>
+            <input type="file" name="uploaded_file" accept="image/jpeg"></input>
+            <h4>Select theme</h4>
+            <input type="radio" name="theme" value="exam"> Exam<br></br></input>
+            <input type="radio" name="theme" value="food"> Food<br></br></input>
+            <input type="radio" name="theme" value="traffic"> Traffic<br></br></input>
+            <input type="radio" name="theme" value="nature"> Nature<br></br></input>
+            <h4>Words</h4>
+            hungarian: <input accept-charset="utf-8" type="text" name="hun"><br></br></input>
+            english: <input accept-charset="utf-8" type="text" name="eng"><br></br></input>
+            <p></p>
+            <input type="submit" class="btn btn-default btn-md" value="Press"></input> to upload the file!
+        </form>
+    </div>
+</div>
+<div id="lists" class="container">
+
+    <div id="teacher-button-group" class="btn-group">
+        <button id="wordcards-button" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-list-alt"
+                                                                                  aria-hidden="true"> WordCards</span>
+        </button>
+        <button id="results-button" type="button" class="btn btn-primary"><span
+                class="glyphicon glyphicon glyphicon-dashboard" aria-hidden="true"> Results</span></button>
+    </div>
+    <div class="row list-group">
+        <table id="big-table" style="display: none">
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

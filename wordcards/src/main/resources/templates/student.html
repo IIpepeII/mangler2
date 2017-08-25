@@ -1,0 +1,48 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head th:include="header :: head">
+</head>
+<body>
+<div th:include="navbar :: navbar"></div>
+
+<div class="jumbotron">
+    <div id="get-card-button-container" class="container">
+    </div>
+    <div id="themes-group" class="btn-group">
+        <h3>Exercise:</h3>
+        <button id="nature" type="button" class="exercise-button btn btn-default">Nature</button>
+        <button id="food" type="button" class="exercise-button btn btn-default">Food</button>
+        <button id="traffic" type="button" class="exercise-button btn btn-default">Traffic</button>
+        <button id="mixed-button" type="button" class="btn btn-default">Mixed</button>
+        <button id="exam" type="button" class="exercise-button btn btn-primary"> Exam</button>
+    </div>
+    <div>
+        <div id="result-container" style="display: none">
+            <h4>Last result:<span id="result-points"></span></h4>
+            <form action="/save_result" method="post">
+                First name: <input id="first-name" type="text" name="fname"/><br/>
+                Last name: <input id="last-name" type="text" name="lname"/><br/>
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="card-image-container" class="container" style="display: none">
+    <img id="card-image" src="#" border="5" alt="Red dot"/>
+    <form method="POST" enctype="multipart/form-data" action="upload">
+        <div>
+            <h3>magyar/english</h3>
+            <input id="hun-student-input" autocomplete="off"
+                   class="word-input" type="text" name="hun"/>
+            <h3>english/angol:</h3>
+            <input id="eng-student-input" autocomplete="off"
+                   class="word-input" type="text" name="eng"/>
+        </div>
+    </form>
+    <div>
+        <button style="display: none" id="get-card" class="btn btn-primary btn-lg">Next</button>
+    </div>
+</div>
+
+</body>
+</html>
